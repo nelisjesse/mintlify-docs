@@ -3,9 +3,9 @@
   "theme": "almond",
   "name": "Detatch API",
   "colors": {
-    "primary": "#F5F5EC",
-    "light": "#F5F5EC",
-    "dark": "#F5F5EC"
+    "primary": "#000000",
+    "light": "#0c0c0c",
+    "dark": "#0c0c0c"
   },
   "favicon": "/images/Detatchicon.png",
   "navigation": {
@@ -64,5 +64,8 @@
   },
   "background": {
     "decoration": "gradient"
+  },
+  "icons": {
+    "library": "fontawesome"
   }
 }
