@@ -16,15 +16,27 @@
       "href": "https://app.detatch.nl"
     }
   },
-  "navigation": [
-    {
-      "group": "API Reference",
-      "pages": [
-        "api-reference/introduction",
-        "openapi.json"
-      ]
-    }
-  ],
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "api-reference/introduction"
+            ]
+          },
+          {
+            "group": "Endpoints",
+            "pages": [
+              "openapi.json"
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "api": {
     "baseUrl": "https://api.detatch.co",
     "auth": {
