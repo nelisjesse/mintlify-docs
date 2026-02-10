@@ -18,15 +18,6 @@
             "pages": [
               "api-reference/introduction"
             ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
           }
         ]
       }
@@ -69,6 +60,9 @@
     "library": "fontawesome"
   },
   "api": {
-    "openapi": "/openapi.json"
+    "openapi": "/openapi.json",
+    "playground": {
+      "display": "interactive"
+    }
   }
 }
