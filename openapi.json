@@ -1,0 +1,62 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Detatch API",
+    "description": "API documentation for Detatch services.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.detatch.co",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/connect": {
+      "get": {
+        "summary": "Check API connection",
+        "description": "This endpoint is used to verify the validity of your API key and ensure that a successful connection to the Detatch API can be established. It serves as a heartbeat or authentication test.",
+        "operationId": "connectTest",
+        "responses": {
+          "200": {
+            "description": "Successful connection. The API key is valid.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "connected"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Authentication successful"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized. The API key is missing or invalid."
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Enter your API key in the format: API_KEY_HERE"
+      }
+    }
+  }
+}

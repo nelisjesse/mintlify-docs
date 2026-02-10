@@ -67,5 +67,8 @@
   },
   "icons": {
     "library": "fontawesome"
+  },
+  "api": {
+    "openapi": "/openapi.json"
   }
 }
