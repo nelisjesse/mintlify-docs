@@ -1,67 +1,36 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "almond",
   "name": "Detatch API",
+  "logo": "/images/Detatch.png",
+  "favicon": "/images/Detatchicon.png",
+  "theme": "almond",
   "colors": {
     "primary": "#000000",
     "light": "#0c0c0c",
     "dark": "#0c0c0c"
   },
-  "favicon": "/images/Detatchicon.png",
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction",
-              "openapi.json" 
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "logo": "/images/Detatch.png",
   "navbar": {
-    "links": [],
     "primary": {
       "type": "button",
       "label": "Dashboard",
       "href": "https://app.detatch.nl"
     }
   },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
-  },
-  "integrations": {
-    "intercom": {
-      "appId": "naviv1oa"
+  "navigation": [
+    {
+      "group": "API Reference",
+      "pages": [
+        "api-reference/introduction",
+        "openapi.json"
+      ]
     }
-  },
-  "appearance": {
-    "strict": true,
-    "default": "light"
-  },
-  "background": {
-    "decoration": "gradient"
-  },
-  "icons": {
-    "library": "fontawesome"
-  },
+  ],
   "api": {
-    "openapi": "/openapi.json",
+    "baseUrl": "https://api.detatch.co",
+    "auth": {
+      "method": "bearer"
+    },
+    "openapi": "openapi.json",
     "playground": {
       "display": "interactive"
     }
